@@ -8,8 +8,7 @@ eventListener()
 
 function eventListener(){
     window.addEventListener('DOMContentLoaded',()=>{
-      //يعني listner لما الصفحة تفتح وهيك بعمل هاد الفنكشن
-      //DOMContentLoaded >> كل السكربتس اللي فيها بجهزوا وبعمل رن للمثودس
+      
         loadJson()
         loadCart()
     })
@@ -153,11 +152,10 @@ let cartitem
 if(e.target.tagName==="BUTTON"){
   cartitem=e.target.parentElement
   cartitem.remove(); //here
-//ليه حطيناها بهاد السطر كمان غير سطر 162
 }
-else if(e.target.tagName=="I"){//ايش هي الI
+else if(e.target.tagName=="I"){
 cartitem=e.target.parentElement.parentElement
-cartitem.remove();// here
+cartitem.remove();
 
 }
 let products=getProductFromStorage()
