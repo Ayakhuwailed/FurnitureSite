@@ -151,7 +151,7 @@ function deleteProduct(e){
 let cartitem
 if(e.target.tagName==="BUTTON"){
   cartitem=e.target.parentElement
-  cartitem.remove(); //here
+  cartitem.remove(); 
 }
 else if(e.target.tagName=="I"){
 cartitem=e.target.parentElement.parentElement
@@ -162,6 +162,6 @@ let products=getProductFromStorage()
 let updateProducts=products.filter(product=>{
   return product.id!==parseInt(cartitem.dataset.id)
 })
-localStorage.setItem('products',JSON.stringify(updateProducts)) //what????/
+localStorage.setItem('products',JSON.stringify(updateProducts))
 updateCartInfo()
 }
